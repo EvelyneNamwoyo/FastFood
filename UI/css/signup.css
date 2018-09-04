@@ -4,7 +4,7 @@
     opacity:95;
     top:0;
     left:0;
-    /* display: none; */
+    display: none; 
     position: fixed;
     background: #5c4b4bb6;
     overflow: auto;
