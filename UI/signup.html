@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="style.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <header>
+            <nav><button id="mybtn" onclick="signupshow()">Create Account</button></nav>
+
+        </header>
+        <main>
+            <div id="signup">
+            <div class = "signup-form " id="mySignup">
+                <form id="form" class = "form" method = "POST">
+                    <span class="close" id="close">&times;</span>
+                    <h2>Signup or Login</h2>
+                    <hr>
+                    <div class = "field">
+                        <div field-fullname>
+                            <label for="fullname">Full Name</label>
+                        </div>
+                        <div>
+                            <input type="text" id="name" class = "form-input-fullname">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="field-email">
+                            <label for="Email Address">Email Address</label>
+                        </div>
+                        <div class = "field-email">
+                            <input id="email" name="email" class="form-input-email" type="email">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                            <div class="field-password">
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="field-password">
+                                <input id="password" name="password" class="form-input-password" type="password">
+                            </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div>
+                        <input id="submit" class="ui button red fluid disabled" value="Register" type="submit">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="signin-modal">
+            <div>
+                <form>
+                    <span class="close" id="close">&times;</span>
+                    <h2>Login</h2>
+                    <hr>
+                </form>
+            </div>
+        </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="singnup.js"></script>
+    </body>
+</html> 
