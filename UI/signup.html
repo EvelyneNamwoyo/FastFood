@@ -4,18 +4,24 @@
         <meta charset="utf-8">
         <title></title>
         <link href="css/signup.css" rel="stylesheet">
+        <script src="javascript/signup.js"></script>
         
     </head>
-    <body>
+    <body class="body">
         <header>
-            <nav><button id="mybtn" onclick="signupshow()">Create Account</button></nav>
+            <nav>
+                <div>
+                    <p><button id="mybtn" onclick="signin_show()">Log in</button></p>
+                    <p><button id="mybtn" onclick="signup_show()">Create Account</button></p>   
+                </div> 
+            </nav>
 
         </header>
         <main>
-            <div id="signup">
+            <div id="signup_modal">
             <div class = "signup-form " id="mySignup">
                 <form id="form" class = "form" method = "POST">
-                    <span class="close" id="close">&times;</span>
+                    <span class="close" id="close" onclick="signup_hide()">&times;</span>
                     <h2>Signup</h2>
                     <hr>
                     <div class = "field">
@@ -52,10 +58,10 @@
                 </form>
             </div>
         </div>
-        <div class="signin-modal" id="signup">
-            <div class = "signup-form " id="mySignup">
+        <div id="signin_modal">
+            <div class = "signin-form " id="mySignin">
                 <form>
-                    <span class="close" id="close">&times;</span>
+                    <span class="close" id="close" onclick="signin_hide()">&times;</span>
                     <h2>Login</h2>
                     <hr>
                     <div class="field">
@@ -87,6 +93,5 @@
         <footer>
 
         </footer>
-        <script src="singnup.js"></script>
     </body>
 </html> 
