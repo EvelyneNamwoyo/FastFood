@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title></title>
-        <link href="style.css" rel="stylesheet">
+        <link href="css/signup.css" rel="stylesheet">
         
     </head>
     <body>
@@ -16,7 +16,7 @@
             <div class = "signup-form " id="mySignup">
                 <form id="form" class = "form" method = "POST">
                     <span class="close" id="close">&times;</span>
-                    <h2>Signup or Login</h2>
+                    <h2>Signup</h2>
                     <hr>
                     <div class = "field">
                         <div field-fullname>
@@ -52,12 +52,34 @@
                 </form>
             </div>
         </div>
-        <div class="signin-modal">
-            <div>
+        <div class="signin-modal" id="signup">
+            <div class = "signup-form " id="mySignup">
                 <form>
                     <span class="close" id="close">&times;</span>
                     <h2>Login</h2>
                     <hr>
+                    <div class="field">
+                            <div class="field-email">
+                                <label for="Email Address">Email Address</label>
+                            </div>
+                            <div class = "field-email">
+                                <input id="email" name="email" class="form-input-email" type="email">
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                                <div class="field-password">
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="field-password">
+                                    <input id="password" name="password" class="form-input-password" type="password">
+                                </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div>
+                            <input id="submit" class="ui button red fluid disabled" value="Submit" type="submit">
+                        </div>
+    
                 </form>
             </div>
         </div>
