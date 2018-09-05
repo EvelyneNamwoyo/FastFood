@@ -21,3 +21,21 @@ function signin_hide(){
     document.getElementById("signin_modal").style.display = "none";
 
 }
+
+
+//Jvascript to show and hide the added items
+function show_chicken(){
+    document.getElementById("chicken").style.display = "block";
+}
+
+function show_chips(){
+    document.getElementById("chips").style.display = "block";
+}
+
+function hide_chicken(){
+    document.getElementById("chicken").style.display = "none";
+}
+
+function hide_chips(){
+    document.getElementById("chips").style.display = "none";
+}
