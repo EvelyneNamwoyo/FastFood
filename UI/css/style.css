@@ -1,0 +1,94 @@
+aside{
+    float:right;
+    margin: 0 1.5%;
+    width: 28%;
+    border: 1px solid #796161;
+    margin-top: 100px;
+    border-radius: 5px;
+}
+aside .chicken-modal, aside .chips-modal{
+    display: none;
+}
+
+aside #submit{
+    background-color: rgb(156, 43, 43);
+} 
+aside h3{
+    text-align: center;
+}
+span button{
+    border: 0px;
+}
+main{
+    float: left;
+    margin: 0 1.5%;
+    width: 63%;
+}
+.main-menu{
+    max-width: 700px;
+    margin:0 auto;
+    display: block;
+    color: rgb(0, 4, 7);
+    overflow:auto;
+}
+
+.food-category{
+    margin-bottom: 80px;
+}
+
+.category-title{
+    /* font-family: georgia; */
+    /* font-size: 50px; */
+    display: block;
+    font-weight:normal;
+    margin: 20px 0; 
+    text-align: Center;
+}
+
+.food-item{
+    margin: 20px auto;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+.food-item .add{
+    float:right;
+    border-radius: 10px;
+}
+.food-item .add #add{
+    color:red;
+    border-radius: 2px;
+}
+.food-price{
+    float: right;
+    font-weight: lighter;
+    font-family: arial;
+    margin-top: -22px;
+    margin-right:10px;
+
+}
+.food-name{
+    font-family: helvetica;
+    font-weight: bold;
+    border-bottom: 2px  rgb(213, 213, 213); 
+}
+
+
+
+.food-description{
+    font-style: italic;
+    font-size: .9em;
+    line-height: 1.5em;
+
+}
+/* .food-name p, .food-description p{
+    margin-left: 50px;
+} */
+hr{
+margin: 0 auto;
+}
+
+.picture{
+    float:left;
+    margin-right:20px;
+}
+
