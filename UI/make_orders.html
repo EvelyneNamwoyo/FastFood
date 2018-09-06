@@ -3,19 +3,104 @@
         <title>
 
         </title>
-        <link href="css/signup.css" rel="stylesheet">
+        <!-- <link href="css/signup.css" rel="stylesheet"> -->
         <link href="css/style.css" rel="stylesheet">
+        <script src="javascript/signup.js"></script>
     </head>
     <body>
         <header>
-            <nav>
-
-            </nav>
+            <div>
+                <nav class="banner-image">
+                    <p><button id="mybtn" onclick="signin_show()">Log in</button></p>
+                    <p><button id="mybtn" onclick="signup_show()">Create Account</button></p>    
+                </nav>
+            </div>
+            
         </header>
         <main>
+
+                <div id="signup_modal">
+                        <div class = "signup-form " id="mySignup">
+                            <form id="form" class = "form" method = "POST">
+                                <span class="close" id="close" onclick="signup_hide()">&times;</span>
+                                <h2>Signup</h2>
+                                <hr>
+                                <div class = "field">
+                                    <div field-fullname>
+                                        <label for="fullname">Full Name</label>
+                                    </div>
+                                    <div>
+                                        <input type="text" id="name" class = "form-input-fullname">
+                                    </div>
+                                </div>
+            
+                                <div class="field">
+                                    <div class="field-email">
+                                        <label for="Email Address">Email Address</label>
+                                    </div>
+                                    <div class = "field-email">
+                                        <input id="email" name="email" class="form-input-email" type="email">
+                                    </div>
+                                </div>
+            
+                                <div class="field">
+                                        <div class="field-password">
+                                            <label for="password">Password</label>
+                                        </div>
+                                        <div class="field-password">
+                                            <input id="password" name="password" class="form-input-password" type="password">
+                                        </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div>
+                                    <input id="submit" class="ui button red fluid disabled" value="Register" type="submit">
+                                </div>
+            
+                            </form>
+                        </div>
+                    </div>
+                    <div id="signin_modal">
+                        <div class = "signin-form " id="mySignin">
+                            <form>
+                                <span class="close" id="close" onclick="signin_hide()">&times;</span>
+                                <h2>Login</h2>
+                                <hr>
+                                <div class="field">
+                                        <div class="field-email">
+                                            <label for="Email Address">Email Address</label>
+                                        </div>
+                                        <div class = "field-email">
+                                            <input id="email" name="email" class="form-input-email" type="email">
+                                        </div>
+                                    </div>
+                
+                                    <div class="field">
+                                            <div class="field-password">
+                                                <label for="password">Password</label>
+                                            </div>
+                                            <div class="field-password">
+                                                <input id="password" name="password" class="form-input-password" type="password">
+                                            </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div>
+                                        <input id="submit" class="submit" value="Submit" type="submit">
+                                    </div>
+                
+                            </form>
+                        </div>
+                    </div>
             <div class="main-menu">
-                <div class="food-category">
-                    <h2 class="category-title">MAIN COURSE</h2>
+                    <div class="menu-categories" id="categories">
+                            <ul>
+                                <li><a href="#main-course">Main course</a></li>
+                                <li><a href="#">Appetizers</a></li>
+                                <li><a href="#">Drinks</a></li>
+                                <li><a href="#">Breakfast</a></li>
+                            </ul>
+                        </div>
+                <div class="category-main-course" id="main-course">
+                    <!-- <h2 class="category-title">MAIN COURSE</h2> -->
 
                     <hr>
                     <div class="food-item">
@@ -28,7 +113,7 @@
                             </div>
                             <div class="add">
                                     <!-- <img src="C:/Users/Adminn/Documents/Eva/Andela/FastFood/UI/images/plus.png" width=20&amp; height=20> -->
-                                    <button id="add">+</button>
+                                    <button id="add" onclick="show_chicken()">+</button>
                             </div>
                             <div class="food-price">
                                 <p>16,000</p>
@@ -51,6 +136,10 @@
                             <div class="food-name">
                                 <p>Chips</p>
                             </div>
+                            <div class="add">
+                                <!-- <img src="C:/Users/Adminn/Documents/Eva/Andela/FastFood/UI/images/plus.png" width=20&amp; height=20> -->
+                                <button id="add" onclick="show_chips()">+</button>
+                            </div>
                             <div class="food-price">
                                 <p>10,000</p>
                             </div>
@@ -65,6 +154,10 @@
                             <div class="food-name">
                                 <p>Sausages</p>
                             </div>
+                            <div class="add">
+                                <!-- <img src="C:/Users/Adminn/Documents/Eva/Andela/FastFood/UI/images/plus.png" width=20&amp; height=20> -->
+                                <button id="add">+</button>
+                            </div>
                             <div class="food-price">
                                 <p>7000 a pair</p>
                             </div>
@@ -77,6 +170,12 @@
                             <div class="food-name">
                                 <p>Rice pilau</p>
                             </div>
+
+                            <div class="add">
+                                <!-- <img src="C:/Users/Adminn/Documents/Eva/Andela/FastFood/UI/images/plus.png" width=20&amp; height=20> -->
+                                <button id="add">+</button>
+                            </div>
+
                             <div class="food-price">
                                 <p>20000</p><p>+</p>
                             </div>
@@ -89,6 +188,11 @@
                             <div class="food-name">
                                 <p>Beef</p>
                             </div>
+                            <div class="add">
+                                <!-- <img src="C:/Users/Adminn/Documents/Eva/Andela/FastFood/UI/images/plus.png" width=20&amp; height=20> -->
+                                <button id="add">+</button>
+                            </div>
+
                             <div class="food-price">
                                 <p>15,000</p>
                             </div>
@@ -100,5 +204,29 @@
                 </div>
             </div>
         </main>
+        <aside>
+            <header>
+                <h3>View cart</h3>
+            </header>
+            <hr>
+            <div class="chicken-modal" id="chicken">
+                <div class="food-price"><p>16,000 shs</p></div>
+                <div class="food-name"><p>Fried chicken</p></div>
+                <span><button onclick="hide_chicken()"><b>&times; Remove</b></button></span>
+            </div>
+            <hr>
+
+            <div class="chips-modal" id="chips">
+                <div class="food-price"><p>10,000 shs</p></div>
+                <div class="food-name"><p>Chips</p></div>
+                <span><button onclick="hide_chips()"><b>&times; Remove</b></button> </span>
+            </div>
+            <hr>
+            <div>
+                <input id="submit" class="ui button red fluid disabled" value="Checkout" type="submit">
+            </div>
+                                                        
+                
+        </aside>
     </body>
 </html>
