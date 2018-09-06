@@ -83,7 +83,7 @@ hr {
     border-top:1px solid #ccc;
     }
 
-input[type=text], input[type=password], input[type=email] {
+input[type=text], input[type=password], input[type=email], textarea {
     width:82%;
     padding:10px;
     margin-bottom:30px;
@@ -162,7 +162,7 @@ main .main-menu{
 }
 
 /* css for menu categories */
-.main-menu #categories{
+.main-menu #categories, main #add-food-item{
     display:flex;
     justify-content: space-between;
 }
@@ -177,24 +177,39 @@ main .main-menu{
     align-items: center;
     padding: 20px 0;
     /* background-color:rgba(199, 73, 73, 0.842); */
+    background: linear-gradient(to bottom, rgba(170, 95, 95, 0.1), rgba(199, 73, 73, 0.842));
+    width:100%;
     
 }
+ main #add-food-item ul{
+    margin: 10px;
+    margin-left: 250px; 
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    /* background-color:rgba(199, 73, 73, 0.842); */
+    background: linear-gradient(to bottom, rgba(170, 95, 95, 0.1), rgba(199, 73, 73, 0.842));
+    width:50%;
+}
 
-
-  .main-menu #categories ul li{
+  .main-menu #categories ul li,  main #add-food-item ul li{
     /* position: relative; */
     margin: 0 10px;
+    /* background: linear-gradient(to bottom, rgba(170, 95, 95, 0.1), rgba(0,0,0,0.5)); */
 } 
 
-#categories ul li a {
-    color:rgba(199, 73, 73, 0.842);
+#categories ul li a, #add-food-item ul li a {
+    color:rgba(7, 7, 7, 0.842);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 15px;
     font-family: verdana;
 }
 
-.main-menu #categories a::before {
+.main-menu #categories a::before, #add-food-item a::before {
     content: '';
     display: block;
     height: 5px;
@@ -203,17 +218,17 @@ main .main-menu{
     transition: all ease-in-out 500ms;
   }
   
-  .main-menu #categories a:hover::before {
+  .main-menu #categories a:hover::before , #add-food-item a:hover::before {
     width: 100%;
   }
   
-  .main-menu #categories ul li:first-child {
+  .main-menu #categories ul li:first-child , #add-food-item ul li:first-child{
     margin-right: auto;
   }
   
-  .main-menu #categories ul li:last-child {
+  .main-menu #categories ul li:last-child, #add-food-item ul li:last-child {
     margin-left: auto;
-  } */
+  } 
 
 .main-menu{
     max-width: 700px;
@@ -294,8 +309,8 @@ margin: 0 auto;
 .update-food table{
     table-layout: fixed;
     width: 100%;
-    border-collapse: collapse;
-    border: 3px solid red;
+    border-collapse: inherit;
+    border: 3px light rgba(199, 73, 73, 0.842);
 }
 
 .update-food table thead th:nth-child(1) {
@@ -324,13 +339,28 @@ margin: 0 auto;
     text-shadow: 1px 1px 1px black;
   }
 
-
-/* CSS to style link to add new data */
   
  .update-food table th, .update-food table td {
-    padding: 5px;
+    padding: 10px;
   } 
 
 .update-food table tbody td{
     text-align: center;
+}
+
+
+
+/* CSS to style link to add new data */
+.update-food .add-food-item{
+    align-content: center;
+    margin-left: 100px;
+}
+
+
+/* css to align the add food item form */
+
+.add-food{
+    width:80%;
+    margin:0 auto;
+    margin-left: 300px;
 }
