@@ -155,7 +155,7 @@ aside h3{
 span button{
     border: 0px;
 }
-main{
+main .main-menu{
     float: left;
     margin: 0 1.5%;
     width: 63%;
@@ -283,3 +283,54 @@ margin: 0 auto;
     margin-right:20px;
 }
 
+
+/* CSS to style the update.html page */
+.update-food{
+    width:80%;
+    margin:10px auot;
+    margin-left:100px;
+
+}
+.update-food table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid red;
+}
+
+.update-food table thead th:nth-child(1) {
+    width: 15%;
+  }
+  
+.update-food tablethead th:nth-child(2) {
+    width: 40%;
+  }
+  
+.update-food table thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+.update-food table thead th:nth-child(4) {
+    width: 15%;
+  }
+.update-food table thead th:nth-child(5) {
+    width: 15%;
+  }
+  .update-food table th {
+    font-family: 'Rock Salt', cursive;
+    background: linear-gradient(to bottom, rgba(170, 95, 95, 0.1), rgba(0,0,0,0.5));
+    /* border: 3px solid rgba(199, 73, 73, 0.842); */
+    /* color: rgb(177, 31, 31); */
+    text-shadow: 1px 1px 1px black;
+  }
+
+
+/* CSS to style link to add new data */
+  
+ .update-food table th, .update-food table td {
+    padding: 5px;
+  } 
+
+.update-food table tbody td{
+    text-align: center;
+}
