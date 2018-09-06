@@ -13,7 +13,14 @@
             </nav>
         </header>
         <main>
-            <form>
+            <div class="add-food-item" id="add-food-item">
+                    <ul>
+                            <li><a href="make_orders.html">Home</a></li>
+                            <li><a href="update.html">Food Items</a></li>
+                            <li><a href="orders.html">Orders</a></li>
+                        </ul>
+            </div>
+            <form class="add-food">
                 <table>
                     <tr>
                         <td>Food Name</td>
@@ -36,26 +43,9 @@
                         <td><input type="text" name="food-price"></td> 
                     </tr>
 
-                    <tr>
-                        <td>Food Name</td>
-                                    
-                        <td><input type="submit" name="submit" id="submit" value="Add"></td> 
-                    </tr>
-                    <!-- <tr>
-                            <td>Food Name</td>
-                            <td>Description</td>
-                            <td>Category</td>
-                            <td>Price</td>
-                        </tr>
-                        <tr>
-                                <td>Food Name</td>
-                                <td>Description</td>
-                                <td>Category</td>
-                                <td>Price</td>
-                            </tr> -->
-
                     
                 </table>
+                <input id="submit" class="submit" value="Add" type="submit">
             </form>
 
         </main>
