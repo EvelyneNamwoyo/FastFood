@@ -162,7 +162,7 @@ main .main-menu{
 }
 
 /* css for menu categories */
-.main-menu #categories, main #add-food-item{
+.main-menu #categories, main #add-food-item, .update-food .add-food-item{
     display:flex;
     justify-content: space-between;
 }
@@ -181,7 +181,7 @@ main .main-menu{
     width:100%;
     
 }
- main #add-food-item ul{
+ main #add-food-item ul, .update-food .add-food-item ul{
     margin: 10px;
     margin-left: 250px; 
     list-style: none;
@@ -195,13 +195,13 @@ main .main-menu{
     width:50%;
 }
 
-  .main-menu #categories ul li,  main #add-food-item ul li{
+  .main-menu #categories ul li,  main #add-food-item ul li, .update-food .add-food-item ul li{
     /* position: relative; */
     margin: 0 10px;
     /* background: linear-gradient(to bottom, rgba(170, 95, 95, 0.1), rgba(0,0,0,0.5)); */
 } 
 
-#categories ul li a, #add-food-item ul li a {
+#categories ul li a, #add-food-item ul li a , .update-food .add-food-item ul li a{
     color:rgba(7, 7, 7, 0.842);
     text-decoration: none;
     text-transform: uppercase;
@@ -209,7 +209,7 @@ main .main-menu{
     font-family: verdana;
 }
 
-.main-menu #categories a::before, #add-food-item a::before {
+.main-menu #categories a::before, #add-food-item a::before, .update-food .add-food-item a::before{
     content: '';
     display: block;
     height: 5px;
@@ -218,15 +218,15 @@ main .main-menu{
     transition: all ease-in-out 500ms;
   }
   
-  .main-menu #categories a:hover::before , #add-food-item a:hover::before {
+  .main-menu #categories a:hover::before , #add-food-item a:hover::before, .update-food .add-food-item a:hover::before {
     width: 100%;
   }
   
-  .main-menu #categories ul li:first-child , #add-food-item ul li:first-child{
+  .main-menu #categories ul li:first-child , #add-food-item ul li:first-child, .update-food .add-food-item ul li:first-child{
     margin-right: auto;
   }
   
-  .main-menu #categories ul li:last-child, #add-food-item ul li:last-child {
+  .main-menu #categories ul li:last-child, #add-food-item ul li:last-child, .update-food .add-food-item ul li:last-child {
     margin-left: auto;
   } 
 
@@ -353,7 +353,7 @@ margin: 0 auto;
 /* CSS to style link to add new data */
 .update-food .add-food-item{
     align-content: center;
-    margin-left: 100px;
+    /* margin-left: 10px; */
 }
 
 
