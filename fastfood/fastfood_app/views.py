@@ -1,5 +1,5 @@
 from fastfood_app import app
-from flask import jsonify
+from flask import jsonify, abort
 orders = [
     {'id': 0,
      'Category': 'Main Course',
@@ -21,4 +21,13 @@ orders = [
 @app.route('/FastFood/api/v2/orders', methods=['GET'])
 def get_orders():
     return jsonify({'orders':orders})
+
+#This endpoint gets a specific order
+@app.route('/FastFood/api/v2/orders/<int:order_id>', methods=['GET'])
+def get_order(order_id):
+    order = [ order for order in orders if order['id'] == order_id]
+    if len(order) == 0:
+        abort(404)
+    return jsonify({'order':order[0]})
+
 
