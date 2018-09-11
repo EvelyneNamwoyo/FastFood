@@ -1,5 +1,5 @@
 from fastfood_app import app
-from flask import jsonify, abort, make_response
+from flask import jsonify, abort, make_response, request
 orders = [
     {'id': 0,
      'Category': 'Main Course',
@@ -32,5 +32,19 @@ def get_order(order_id):
     if len(order) == 0:
         abort(404)
     return jsonify({'order':order[0]})
+
+#Function for an endpoint to create new request
+@app.route('/FastFood/api/v2/orders', methods=['POST'])
+def place_order():
+    if not request.json or not 'Food Name' in request.json:
+        abort(400)
+    order = {'id':orders[-1]['id']+1,
+            'category':request.json.get('category', ""),
+            'owner': request.json.get('owner', ""),
+            'Food Name':request.json['Food Name'],
+            'Description':request.json.get('Description',"")
+            }
+    orders.append(order)
+    return jsonify({'order':'order'})
 
 
