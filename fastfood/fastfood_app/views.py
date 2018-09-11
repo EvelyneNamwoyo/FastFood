@@ -1,11 +1,11 @@
 from fastfood_app import app
+from flask import jsonify
 orders = [
     {'id': 0,
      'Category': 'Main Course',
      'owner': 'Vernor Vinge',
      'Food Name':'Chicken Stew',
-     'Description': 'Nice and tasty food'
-     },
+     'Description': 'Nice and tasty food'},
     {'id': 2,
      'Category': 'Main Course',
      'owner': 'Erina Sis',
@@ -18,5 +18,7 @@ orders = [
      'Description': 'Made from the natural african mango'}
 ]
 
-@app.route('/orders', methods=['GET'])
+@app.route('/FastFood/api/v2/orders', methods=['GET'])
 def get_orders():
+    return jsonify({'orders':orders})
+
