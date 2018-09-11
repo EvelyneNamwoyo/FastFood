@@ -1,5 +1,5 @@
 from fastfood_app import app
-from flask import jsonify, abort
+from flask import jsonify, abort, make_response
 orders = [
     {'id': 0,
      'Category': 'Main Course',
@@ -17,6 +17,9 @@ orders = [
      'Food Name':'Mango Juice',
      'Description': 'Made from the natural african mango'}
 ]
+@app.errorhandler(404)
+def not_found(error):
+    return make_response(jsonify({'error': 'Not found'}), 404)
 
 @app.route('/FastFood/api/v2/orders', methods=['GET'])
 def get_orders():
