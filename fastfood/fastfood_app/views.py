@@ -38,13 +38,14 @@ def get_order(order_id):
 def place_order():
     if not request.json or not 'Food Name' in request.json:
         abort(400)
-    order = {'id':orders[-1]['id']+1,
-            'category':request.json.get('category', ""),
-            'owner': request.json.get('owner', ""),
+    order = {
+            'id':orders[-1]['id'] + 1,
+            'category':request.json['category'],
+            'owner': request.json['owner'],
             'Food Name':request.json['Food Name'],
-            'Description':request.json.get('Description',"")
+            'Description':request.json['Description']
             }
     orders.append(order)
-    return jsonify({'order':'order'})
+    return jsonify({'order':order}), 201
 
 
