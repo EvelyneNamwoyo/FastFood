@@ -38,9 +38,9 @@ html {
 /* Adding banner image */
 .banner-image{
     width: 100%;
-/*     background-image: url('images/pizza.jpg'); */
+    background-image: url('../images/pizza.jpg'); 
     height: 200px;
-    background-color: red;  
+/*     background-color: red;   */
     background-position: center;
 }
 
