@@ -49,7 +49,7 @@ def place_order():
     return jsonify({'order':order}), 201
 
 
-@app.route('FastFood/api/v2/orders/<int:order_id>', methods=['PUT'])
+@app.route('/FastFood/api/v2/orders/<int:order_id>', methods=['PUT'])
 def update_order_status(order_id):
     order = [ order for order in orders if order['id'] == order_id]
     if ((len(order)==0) or (not request.json) or ('category' in request.json and type(request.json['category']) != unicode) or ('owner' in request.json and type(request.json['owner']) != unicode) or ('Food Name' in request.json and type(request.json['Food Name']) != unicode) or ('Description' in request.json and type(request.json['Description']) != unicode)):
