@@ -38,7 +38,7 @@ html {
 /* Adding banner image */
 .banner-image{
     width: 100%;
-    background-image: url('C:/Users/Adminn/Documents/Eva/Andela/FastFood/UI/images/pizza.jpg');
+    background-image: url('UI/images/pizza.jpg');
     height: 200px;
     /* background-color: purple;  */
     background-position: center;
