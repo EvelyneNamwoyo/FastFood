@@ -17,20 +17,37 @@ orders = [
      'Food Name':'Mango Juice',
      'Description': 'Made from the natural african mango'}
 ]
-@app.errorhandler(404)
-def not_found(error):
-    return make_response(jsonify({'error': 'Not found'}), 404)
 
-@app.route('/FastFood/api/v2/orders', methods=['GET'])
+
+@app.route('/FastFood/api/v1/orders', methods=['GET'])
 def get_orders():
     return jsonify({'orders':orders})
 
 #This endpoint gets a specific order
-@app.route('/FastFood/api/v2/orders/<int:order_id>', methods=['GET'])
+@app.route('/FastFood/api/v1/orders/<order_id>', methods=['GET'])
 def get_order(order_id):
-    order = [ order for order in orders if order['id'] == order_id]
-    if len(order) == 0:
-        abort(404)
-    return jsonify({'order':order[0]})
+
+    # if (isinstance(order_id, int)): 
+    #     b="int"
+    # elif (isinstance(order_id, str)): 
+    #     b="string"
+    # # return type(order_id)
+    # return jsonify({'type':b})
+    if not order_id.isdigit():
+        return jsonify({'Error': 'Invalid order id, order id should be an integer'}),400
+    else:
+        
+        # order = [ order if order['id'] == order_id else 'That order has not yet been made' for order in orders ]
+        if len(orders) > 0:
+            item=[]
+            for order in orders:
+                if int(order['id']) == int(order_id):
+                    item.append(order)
+            if item == []:
+                return jsonify({'order':'That order has not yet been made'}),404
+            return jsonify({'order':item})
+        
+        else:
+            return make_response(jsonify({'error': 'There are no orders currently'}), 404)
 
 
