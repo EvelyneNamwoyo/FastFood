@@ -18,7 +18,7 @@ orders = [
      'Description': 'Made from the natural african mango'}
 ]
 
-@app.route('/FastFood/api/v2/orders', methods=['GET'])
+@app.route('/FastFood/api/v1/orders', methods=['GET'])
 def get_orders():
-    return jsonify({'orders':orders})
+    return jsonify({'orders':orders}), 200
 
