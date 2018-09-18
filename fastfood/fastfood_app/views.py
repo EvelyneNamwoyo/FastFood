@@ -51,8 +51,8 @@ def place_order():
 @app.route('/FastFood/api/v2/orders/<int:order_id>', methods=['PUT'])
 def update_order_status(order_id):
     order = [ order for order in orders if order['id'] == order_id]
-    if ((len(order)==0) or (not request.json) or ('category' in request.json and type(request.json['category']) != str) or ('owner' in request.json and type(request.json['owner']) != str) or ('Food Name' in request.json and type(request.json['Food Name']) != str) or ('Description' in request.json and type(request.json['Description']) != str)):
-         abort(400)
+    if ((len(order)==0) or (not request.json) or ('category' in request.json and type(request.json['category']) != str) or ('order status' in request.json and type(request.json['order status']) != str) or ('Food Name' in request.json and type(request.json['Food Name']) != str) or ('Description' in request.json and type(request.json['Description']) != str)):
+        jsonify({'error': 'Invalid innput'}), 404
     order[0]['category'] = request.json.get('category', order[0]['category'])
     order[0]['owner'] = request.json.get('owner', order[0]['owner'])
     order[0]['Food Name'] = request.json.get('Food Name', order[0]['Food Name'])
