@@ -59,7 +59,12 @@ class EndpointTest(unittest.TestCase):
                                 })
         self.assertEqual(response.status_code,201)
     
-
+    """This test function checks if mandatory parameter Food Name is not passed"""
+    def test_for_mandatory_parameter_missing_in_placed_order(self):
+        response = self.app.post('/FastFood/api/v1/orders',data = json.dumps({"Description": "Tasty food"}), 
+                                content_type="application/json", follow_redirects=True)
+        self.assertEqual(response.status_code,404)
+    """This test function check"""
     
 
     
