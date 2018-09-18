@@ -1,7 +1,7 @@
 from fastfood_app import app
 from flask import jsonify, abort, make_response, request
-from flask_httpauth import HttpBasicAuth
-auth = HttpBasicAuth
+from flask_httpauth import HTTPBasicAuth
+auth = HTTPBasicAuth()
 orders = [
     {
         'id': 1,
@@ -68,3 +68,7 @@ def get_password(username):
     if username=='admin':
         return 'Eva'
     return make_response(jsonify({'error': 'Unauthorized access'}), 401)
+
+@auth.error_handler
+def unauthorized():
+    return make_response(jsonify({'error': 'You need a user name to make order updates'}), 401)
