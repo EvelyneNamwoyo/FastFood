@@ -5,11 +5,7 @@ from fastfood_app import views
 class EndpointTest(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
-        self.orders = {
-                    'Category': 'Main Course',
-                    'owner': 'Vernor Vinge',
-                    'Food Name':'Chicken Stew',
-                    'Description': 'Nice and tasty food'}
+
         
     def tearDown(self):
         pass
