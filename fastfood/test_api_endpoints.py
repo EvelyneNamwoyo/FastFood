@@ -64,7 +64,12 @@ class EndpointTest(unittest.TestCase):
         response = self.app.post('/FastFood/api/v1/orders',data = json.dumps({"Description": "Tasty food"}), 
                                 content_type="application/json", follow_redirects=True)
         self.assertEqual(response.status_code,404)
-    """This test function check"""
+
+    """This test function check whether Food Name parameter is a string"""
+    def test_to_throw_type_error_when_str_is_notpassed_as_parameter(self):
+        response = self.app.post('/FastFood/api/v1/orders',data = json.dumps({"Food Name": 4}), 
+                                content_type="application/json", follow_redirects=True)
+        self.assertRaises(TypeError, response)
     
 
     
