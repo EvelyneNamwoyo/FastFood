@@ -4,24 +4,21 @@ orders = [
     {
      'id': 1,
      'category': 'Main Course',
-     'owner': 'Vernor Vinge',
+     'order status': False,
      'Food Name':'Chicken Stew',
      'Description': 'Nice and tasty food'},
     {
         'id': 2,
         'category': 'Main Course',
-        'owner': 'Erina Sis',
+        'order': False,
         'Food Name':'Rice pilau',
      'Description': 'Nice and tasty food'},
     {'id': 3,
      'category': 'Drinks',
-     'owner': 'Sue Nalima',
+     'order': False,
      'Food Name':'Mango Juice',
      'Description': 'Made from the natural african mango'}
 ]
-@app.errorhandler(404)
-def not_found(error):
-    return make_response(jsonify({'error': 'Not found'}), 404)
 
 @app.route('/FastFood/api/v2/orders', methods=['GET'])
 def get_orders():
@@ -32,7 +29,7 @@ def get_orders():
 def get_order(order_id):
     order = [ order for order in orders if order['id'] == order_id]
     if len(order) == 0:
-        abort(404)
+        jsonify({'error': 'Not found'}), 404
     return jsonify({'order':order[0]})
 
 #Function for an endpoint to create new request
