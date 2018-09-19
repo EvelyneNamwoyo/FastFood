@@ -74,6 +74,7 @@ def unauthorized():
     return make_response(jsonify({'error': 'You need a user name to make order updates'}), 401)
 
 @app.route('/FastFood/api/v1/orders/<int:order_id>', methods=['DELETE'])
+@auth.login_required
 def delete_order(order_id):
     if len(orders) == 0:
         return make_response(jsonify({'error': 'There are no orders currently'}), 404)
