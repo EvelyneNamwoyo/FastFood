@@ -20,5 +20,8 @@ orders = [
 
 @app.route('/FastFood/api/v1/orders', methods=['GET'])
 def get_orders():
+    if len(orders)==0:
+        return make_response(jsonify({'message': 'There are no orders made'}), 404)
+        
     return jsonify({'orders':orders}), 200
 
