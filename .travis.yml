@@ -1,0 +1,10 @@
+language: python
+
+python: 
+    - "3.6"
+
+script:
+    - pytest tests --cov=api --cov-report term-missing
+
+after_success:
+  
