@@ -9,19 +9,20 @@ orders = [
             'Description': 'Nice and tasty food'},
        {
            'id': 2,
-           'Category': 'Main Course',
+           'category': 'Main Course',
            'order status': False,
            'Food Name':'Rice pilau',
            'Description': 'Nice and tasty food'},
        {
            'id': 3,
-           'Category': 'Drinks',
+           'category': 'Drinks',
            'order status': False,
            'Food Name':'Mango Juice',
            'Description': 'Made from the natural african mango'}
     ]
 
 @app.route('/FastFood/api/v1/orders', methods=['GET'])
+#This function gets all orders
 def get_orders():
     if len(orders)==0:
         return make_response(jsonify({'message': 'There are no orders made'}), 404)
