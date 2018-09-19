@@ -37,6 +37,15 @@ class EndpointTest(unittest.TestCase):
                                 content_type="application/json", follow_redirects=True)
         self.assertEqual(response.status_code,401)
 
+    def test_successful_delete(self):
+        """This function tests whether an order was successfully deleted"""
+        headers = {
+                   'Authorization': 'Basic %s' % b64encode(b"admin:Eva").decode("ascii")
+                   }
+        response = self.app.put('/FastFood/api/v1/orders/2',headers=headers,
+                                content_type="application/json", follow_redirects=True)
+        self.assertEqual(response.status_code,200)
+
 
 
 if __name__ == "__main__":
