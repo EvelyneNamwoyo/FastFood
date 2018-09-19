@@ -31,6 +31,12 @@ class EndpointTest(unittest.TestCase):
                                 content_type="application/json", follow_redirects=True)
         self.assertEqual(response.status_code,200)
 
+    """This tests checks whether access denied message is returned for un authorized users"""
+    def test_for_access_denied_for_unauthorized_users(self):
+        response = self.app.put('/FastFood/api/v1/orders/2', data = json.dumps({}),
+                                content_type="application/json", follow_redirects=True)
+        self.assertEqual(response.status_code,401)
+
 
 
 if __name__ == "__main__":
