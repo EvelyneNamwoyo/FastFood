@@ -9,7 +9,7 @@ class EndpointTest(unittest.TestCase):
         pass
     
     def test_to_get_all_orders(self):
-        response = self.app.get('/FastFood/api/v2/orders')
+        response = self.app.get('/FastFood/api/v1/orders')
         self.assertEqual(response.status_code, 200)
     
 
