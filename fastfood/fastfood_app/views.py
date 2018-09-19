@@ -2,7 +2,7 @@ from fastfood_app import app
 from flask import jsonify, make_response
 orders = [
         {
-            'id': 0,
+            'id': 1,
             'Category': 'Main Course',
             'order status': False,
             'Food Name':'Chicken Stew',
