@@ -1,9 +1,17 @@
 import unittest
+<<<<<<< HEAD
+=======
+from flask import json,jsonify,request
+>>>>>>> place-new-order-#160379780
 from fastfood_app import app
 from fastfood_app import views
 class EndpointTest(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
+<<<<<<< HEAD
+=======
+
+>>>>>>> place-new-order-#160379780
         
     def tearDown(self):
         pass
@@ -34,7 +42,33 @@ class EndpointTest(unittest.TestCase):
         response = self.app.get('/FastFood/api/v1/orders/9')
         self.assertEqual(response.status_code,404)
         
+    """This function checks whether api can make an order-post"""
+    def test_to_place_order(self):
+        response = self.app.post('/FastFood/api/v1/orders',data = json.dumps({"Food Name": "milk"}), 
+                                content_type="application/json", follow_redirects=True)
+        result = json.loads(response.data)
+        self.assertEqual(result, {'order':{
+                                'id':4,
+                                'category': '',
+                                'order status': False,
+                                'Food Name':'milk',
+                                'Description': ''
+                                    }
+                                })
+        self.assertEqual(response.status_code,201)
+    
+    """This test function checks if mandatory parameter Food Name is not passed"""
+    def test_for_mandatory_parameter_missing_in_placed_order(self):
+        response = self.app.post('/FastFood/api/v1/orders',data = json.dumps({"Description": "Tasty food"}), 
+                                content_type="application/json", follow_redirects=True)
+        self.assertEqual(response.status_code,404)
 
+    """This test function check whether Food Name parameter is a string"""
+    def test_to_throw_type_error_when_str_is_notpassed_as_parameter(self):
+        response = self.app.post('/FastFood/api/v1/orders',data = json.dumps({"Food Name": 4}), 
+                                content_type="application/json", follow_redirects=True)
+        self.assertRaises(TypeError, response)
+    
 
     
 
