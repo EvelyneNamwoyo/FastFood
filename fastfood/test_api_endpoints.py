@@ -30,10 +30,6 @@ class EndpointTest(unittest.TestCase):
         response = self.app.get(api_url)
         self.assertEqual(response.status_code, 404)
 
-    # def test_to fetch_order_with_nonexistant(self):
-    #     response = self.app.get('/FastFood/api/v1/orders/9')
-    #     self.assertEqual(response.status_code,404)
-
     def test_to_fetch_aspecific_order_when_nonexistant_is_ispassed(self):
         response = self.app.get('/FastFood/api/v1/orders/9')
         self.assertEqual(response.status_code,404)
