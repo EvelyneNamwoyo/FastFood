@@ -3,19 +3,19 @@ from flask import jsonify,make_response
 orders = [
         {
             'id': 1,
-            'Category': 'Main Course',
+            'category': 'Main Course',
             'order status': False,
             'Food Name':'Chicken Stew',
             'Description': 'Nice and tasty food'},
        {
            'id': 2,
-           'Category': 'Main Course',
+           'category': 'Main Course',
            'order status': False,
            'Food Name':'Rice pilau',
            'Description': 'Nice and tasty food'},
        {
            'id': 3,
-           'Category': 'Drinks',
+           'category': 'Drinks',
            'order status': False,
            'Food Name':'Mango Juice',
            'Description': 'Made from the natural african mango'}
