@@ -72,3 +72,18 @@ def get_password(username):
 @auth.error_handler
 def unauthorized():
     return make_response(jsonify({'error': 'You need a user name to make order updates'}), 401)
+
+@app.route('/FastFood/api/v1/orders/<int:order_id>', methods=['DELETE'])
+def delete_order(order_id):
+    if len(orders) == 0:
+        return make_response(jsonify({'error': 'There are no orders currently'}), 404)
+    else:
+        id_orders = []
+        for order in orders:
+             if order['id'] == order_id:
+                id_orders.append(order_id)
+                orders.remove[order]
+        if id_orders ==[]:
+            return make_response(jsonify({'error': 'That order does not exist'}), 404)
+        return make_response(jsonify({'Message': 'order deleted'}), 404)
+        
