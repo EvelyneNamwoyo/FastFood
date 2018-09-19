@@ -29,12 +29,24 @@ def get_orders():
     return jsonify({'orders':orders}), 200
 
 #This endpoint gets a specific order
-@app.route('/FastFood/api/v1/orders/<int:order_id>', methods=['GET'])
+@app.route('/FastFood/api/v1/orders/<order_id>', methods=['GET'])
 def get_order(order_id):
-    order = [ order for order in orders if order['id'] == order_id]
-    if len(order) == 0:
-        abort(404)
-    return jsonify({'order':order[0]})
+    if not order_id.isdigit():
+        return jsonify({'Error': 'Invalid order id, order id should be an integer'}),400
+    else:
+        
+        # order = [ order if order['id'] == order_id else 'That order has not yet been made' for order in orders ]
+        if len(orders) > 0:
+            item=[]
+            for order in orders:
+                if int(order['id']) == int(order_id):
+                    item.append(order)
+            if item == []:
+                return jsonify({'order':'That order has not yet been made'}),404
+            return jsonify({'order':item})
+        
+        else:
+            return make_response(jsonify({'error': 'There are no orders currently'}), 404)
 
 #Function for an endpoint to create new request
 @app.route('/FastFood/api/v1/orders', methods=['POST'])
