@@ -42,8 +42,7 @@ class EndpointTest(unittest.TestCase):
         headers = {
                    'Authorization': 'Basic %s' % b64encode(b"admin:Eva").decode("ascii")
                    }
-        response = self.app.put('/FastFood/api/v1/orders/2',headers=headers,
-                                content_type="application/json", follow_redirects=True)
+        response = self.app.delete('/FastFood/api/v1/orders/3',headers=headers)
         self.assertEqual(response.status_code,200)
 
 
