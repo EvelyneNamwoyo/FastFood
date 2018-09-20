@@ -10,7 +10,6 @@ script:
     -pwd
     -ls
     - pytest
-branches:only: api-develop
     
 after_success:
     - coveralls
