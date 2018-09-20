@@ -1,4 +1,3 @@
-
 language: python
 
 python: 
@@ -8,9 +7,9 @@ install:
     - pip install -r requirements.txt
 
 script:
-    - pytest
     -pwd
     -ls
+    - pytest
     
 after_success:
     - coveralls
