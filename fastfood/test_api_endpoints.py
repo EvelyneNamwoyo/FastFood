@@ -1,19 +1,4 @@
 import unittest
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-from flask import json,jsonify,request
->>>>>>> place-new-order-#160379780
-from fastfood_app import app
-from fastfood_app import views
-class EndpointTest(unittest.TestCase):
-    def setUp(self):
-        self.app = app.test_client()
-<<<<<<< HEAD
-=======
-
->>>>>>> place-new-order-#160379780
-=======
 from flask import json,jsonify,request
 from fastfood_app import app
 from fastfood_app import views
@@ -22,7 +7,6 @@ class EndpointTest(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
 
->>>>>>> delete-order-#160613231
         
     def tearDown(self):
         pass
@@ -78,7 +62,7 @@ class EndpointTest(unittest.TestCase):
     def test_to_throw_type_error_when_str_is_notpassed_as_parameter(self):
         response = self.app.post('/FastFood/api/v1/orders',data = json.dumps({"Food Name": 4}), 
                                 content_type="application/json", follow_redirects=True)
-=======
+        self.assertRaises(TypeError, response)
 
     
     """This test functions checks whether the updated order was successful"""
@@ -115,7 +99,6 @@ class EndpointTest(unittest.TestCase):
         self.assertEqual(response.status_code,200)
 
 
->>>>>>> delete-order-#160613231
 
 if __name__ == "__main__":
     unittest.main()
