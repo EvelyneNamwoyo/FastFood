@@ -9,8 +9,6 @@ install:
 
 script:
     - pytest
-    -pwd
-    -ls
     
 after_success:
     - coveralls
