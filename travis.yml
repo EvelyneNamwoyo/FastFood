@@ -1,5 +1,4 @@
-pwd
-ls
+
 language: python
 
 python: 
@@ -10,6 +9,8 @@ install:
 
 script:
     - pytest
+    -pwd
+    -ls
 branches:only: api-develop
     
 after_success:
