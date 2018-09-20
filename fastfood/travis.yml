@@ -7,9 +7,9 @@ install:
     - pip install -r requirements.txt
 
 script:
-    - pytest
     -pwd
     -ls
+    - pytest
 branches:only: api-develop
     
 after_success:
