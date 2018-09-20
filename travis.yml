@@ -1,3 +1,5 @@
+pwd
+ls
 language: python
 
 python: 
