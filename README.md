@@ -1,9 +1,7 @@
 # FastFood
 
 [![Build Status](https://travis-ci.org/EvelyneNamwoyo/FastFood.svg?branch=api-develop)](https://travis-ci.org/EvelyneNamwoyo/FastFood)
-[![Coverage Status](https://coveralls.io/repos/github/EvelyneNamwoyo/FastFood/badge.svg?branch=master)](https://coveralls.io/github/EvelyneNamwoyo/FastFood?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/EvelyneNamwoyo/FastFood/badge.svg)branch=api-develop](https://coveralls.io/github/EvelyneNamwoyo/FastFood?branch=api-develop)
-
+[![Coverage Status](https://coveralls.io/repos/github/EvelyneNamwoyo/FastFood/badge.svg)](https://coveralls.io/github/EvelyneNamwoyo/FastFood)
 FastFoods is an API for a certain food delivery app
 
 ## Getting Started
