@@ -116,4 +116,3 @@ def delete_order(order_id):
         if id_orders ==[]:
             return make_response(jsonify({'error': 'That order does not exist'}), 404)
         return make_response(jsonify({'Message': 'order deleted'}), 200)
-        
