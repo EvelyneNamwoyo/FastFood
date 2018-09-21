@@ -1,6 +1,6 @@
 # FastFood
 
-[![Build Status](https://travis-ci.org/EvelyneNamwoyo/FastFood.svg?branch=api-develop)](https://travis-ci.org/EvelyneNamwoyo/FastFood)
+[![Build Status](https://travis-ci.org/EvelyneNamwoyo/FastFood.svg?branch=api-develop)](https://travis-ci.org/EvelyneNamwoyo/FastFood) [![Coverage Status](https://coveralls.io/repos/github/EvelyneNamwoyo/FastFood/badge.svg?branch=api-develop)](https://coveralls.io/github/EvelyneNamwoyo/FastFood?branch=api-develop)
 
 FastFoods is an API for a certain food delivery app
 
@@ -34,5 +34,6 @@ This is a step by step process of how to get a development environment running.
 |DELETE   |/FastFood/api/v1/orders | Delete an order|  FALSE      |  
 
 ## Running tests
-To run the unnittests test, use the pytest tests_api_endpoints.py
+To run the unnittests test, run this command in your console.
+pytest
 
