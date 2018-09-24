@@ -1,6 +1,7 @@
 # FastFood
 
 [![Build Status](https://travis-ci.org/EvelyneNamwoyo/FastFood.svg?branch=api-develop)](https://travis-ci.org/EvelyneNamwoyo/FastFood) [![Coverage Status](https://coveralls.io/repos/github/EvelyneNamwoyo/FastFood/badge.svg?branch=api-develop)](https://coveralls.io/github/EvelyneNamwoyo/FastFood?branch=api-develop)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e693bc46fd6177205b63/maintainability)](https://codeclimate.com/github/EvelyneNamwoyo/FastFood/maintainability)
 
 FastFoods is an API for a certain food delivery app
 
