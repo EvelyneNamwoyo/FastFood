@@ -5,15 +5,11 @@ body {
     margin-left:auto; 
     margin-right: auto; 
     min-height:100%;
-    /* height:100%; */
     overflow:auto;
 
     border-radius: 5px;
     -moz-border-radius: 20px;
-    /* background-image: url('C:/Users/Adminn/Documents/Eva/Andela/FastFood/UI/images/sandwich.jpg'); */
-    /* background: url(C:/Users/Adminn/Documents/Eva/Andela/FastFood/UI/images); */
     background-color:rgb(231, 226, 226);
-    /* color: black; */
 }
 
 html { 
@@ -44,7 +40,7 @@ html {
     width: 100%;
     background-image: url('../images/pizza.jpg');
     height: 200px;
-    /* background-color: purple;  */
+/*     background-color: red;   */
     background-position: center;
 }
 
@@ -191,9 +187,7 @@ main .main-menu{
 }
 
   .main-menu #categories ul li,  main #add-food-item ul li, .update-food .add-food-item ul li{
-    /* position: relative; */
     margin: 0 10px;
-    /* background: linear-gradient(to bottom, rgba(170, 95, 95, 0.1), rgba(0,0,0,0.5)); */
 } 
 
 #categories ul li a, #add-food-item ul li a , .update-food .add-food-item ul li a{
