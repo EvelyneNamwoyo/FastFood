@@ -31,7 +31,7 @@ html {
     overflow: auto;
 
 }
-#logout, #history{
+#logout, #history,#loggedin_users{
     display:none;
 }
 
@@ -132,7 +132,7 @@ aside{
     margin-top: 100px;
     border-radius: 5px;
 }
-aside .chicken-modal, aside .chips-modal{
+aside.chicken-modal, aside .chips-modal, aside .unlogged{
     display: none;
 }
 
@@ -361,4 +361,9 @@ section #delete{
 
 table .deleted{
     display: none;
+}
+
+
+.successful{
+    display:none;
 }

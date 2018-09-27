@@ -10,12 +10,10 @@
         <header>
             <div>
                 <nav class="banner-image">
-                    <div>
                     <p id = "login"><button id="mybtn" onclick="signin_show()">Log in</button></p>
                     <p id="logout"><button id="mybtn" onclick="logout()">Log out</button></p>
                     <p id="account"><button id="mybtn" onclick="signup_show()">Create Account</button></p>
-                    <p id="admin"><button id="mybtn"><a href="UI/update.html">Admin</a></button></p> 
-                    </div>   
+                    <p id="admin"><button id="mybtn"><a href="UI/update.html">Admin</a></button></p>  
                 </nav>
             </div>
             
@@ -163,7 +161,7 @@
                             </div>
                             <div class="add">
                                 
-                                <button id="add">+</button>
+                                <button id="add" onclick="show_sausages()">+</button>
                             </div>
                             <div class="food-price">
                                 <p>7000 a pair</p>
@@ -178,12 +176,12 @@
                                 <img src="UI/images/food.jpg" width=100&amp; height=80>
                             </div>
                             <div class="food-name">
-                                <p>Hamberger</p>
+                                <p>Hamburger</p>
                             </div>
 
                             <div class="add">
 
-                                <button id="add">+</button>
+                                <button id="add" onclick="show_hamburger()">+</button>
                             </div>
 
                             <div class="food-price">
@@ -203,7 +201,7 @@
                             </div>
                             <div class="add">
                             
-                                <button id="add">+</button>
+                                <button id="add" onclick="show_salaads()">+</button>
                             </div>
 
                             <div class="food-price">
@@ -217,7 +215,7 @@
                 </div>
             </div>
         </main>
-        <aside>
+        <aside class = "loggedin_users" id="loggedin_users">
             <header>
                 <h3>View cart</h3>
             </header>
@@ -235,10 +233,89 @@
                 <span><button onclick="hide_chips()"><b>&times; Remove</b></button> </span>
             </div>
             <hr>
-            <div>
-                <input id="submit" value="Checkout" type="submit">
+            <div class="chips-modal" id="sausages">
+                <div class="food-price"><p>7,000 shs</p></div>
+                <div class="food-name"><p>Sausages</p></div>
+                <span><button onclick="hide_sausages()"><b>&times; Remove</b></button> </span>
             </div>
-                                                        
+            <hr>
+
+            <div class="chips-modal" id="hamburger">
+                <div class="food-price"><p>20,000 shs</p></div>
+                <div class="food-name"><p>Hamburger</p></div>
+                <span><button onclick="hide_hamburger()"><b>&times; Remove</b></button> </span>
+            </div>
+            <hr>
+
+            <div class="chips-modal" id="salaads">
+                <div class="food-price"><p>15,000 shs</p></div>
+                <div class="food-name"><p>Salaads</p></div>
+                <span><button onclick="hide_salaads()"><b>&times; Remove</b></button> </span>
+            </div>
+            <hr>
+
+            <div class="box">
+                <input id="submit" value="Checkout" type="button" onclick="success_message()">
+            </div>
+                  
+        </aside>
+        <aside >
+            <span class="close" id="close" onclick="success_hide()">&times;</span>
+            <div id="success" class="successful">
+                <div>
+                    <h2>Order submitted</h2>
+                    <div class = "content">
+                        Your order order has been successfully been received
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+
+        <aside id="unlogged">
+            <div>
+            <header>
+                <h3>View cart</h3>
+            </header>
+            <hr>
+            <div class="unlogged" id="chicken-log">
+                <div class="food-price"><p>16,000 shs</p></div>
+                <div class="food-name"><p>Fried chicken</p></div>
+                <span><button onclick="hide_chicken()"><b>&times; Remove</b></button></span>
+            </div>
+            <hr>
+
+            <div class="unlogged" id="chips-log">
+                <div class="food-price"><p>10,000 shs</p></div>
+                <div class="food-name"><p>Chips</p></div>
+                <span><button onclick="hide_chips()"><b>&times; Remove</b></button> </span>
+            </div>
+            <hr>
+            <div class="unlogged" id="sausages-logs">
+                <div class="food-price"><p>7,000 shs</p></div>
+                <div class="food-name"><p>Sausages</p></div>
+                <span><button onclick="hide_sausages()"><b>&times; Remove</b></button> </span>
+            </div>
+            <hr>
+
+            <div class="unlogged" id="hamburger-logs">
+                <div class="food-price"><p>20,000 shs</p></div>
+                <div class="food-name"><p>Hamburger</p></div>
+                <span><button onclick="hide_hamburger()"><b>&times; Remove</b></button> </span>
+            </div>
+            <hr>
+
+            <div class="unlogged" id="salaads-logs">
+                <div class="food-price"><p>15,000 shs</p></div>
+                <div class="food-name"><p>Salaads</p></div>
+                <span><button onclick="hide_salaads()"><b>&times; Remove</b></button> </span>
+            </div>
+            <hr>
+
+            <div>
+                <input id="submit" value="Checkout" type="button" onclick="signin_show()">
+            </div>
+            </div>                                            
                 
         </aside>
     </body>
