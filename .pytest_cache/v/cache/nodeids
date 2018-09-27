@@ -1,0 +1,14 @@
+[
+  "test_api_endpoints.py::EndpointTest::test_for_access_denied_for_unauthorized_users",
+  "test_api_endpoints.py::EndpointTest::test_for_mandatory_parameter_missing_in_placed_order",
+  "test_api_endpoints.py::EndpointTest::test_for_missing_value_when_updating",
+  "test_api_endpoints.py::EndpointTest::test_non_existing_order_ids",
+  "test_api_endpoints.py::EndpointTest::test_to_fetch_aspecific_order",
+  "test_api_endpoints.py::EndpointTest::test_to_fetch_aspecific_order_when_nonexistant_is_ispassed",
+  "test_api_endpoints.py::EndpointTest::test_to_fetch_order_when_str_ispassed_as_id",
+  "test_api_endpoints.py::EndpointTest::test_to_get_all_orders",
+  "test_api_endpoints.py::EndpointTest::test_to_place_order",
+  "test_api_endpoints.py::EndpointTest::test_to_throw_type_error_when_str_is_notpassed_as_parameter",
+  "test_api_endpoints.py::EndpointTest::test_to_throw_type_error_when_str_ispassed_as_id",
+  "test_api_endpoints.py::EndpointTest::test_to_update_status"
+]
