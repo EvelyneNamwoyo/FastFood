@@ -30,8 +30,6 @@ class EndpointTest(unittest.TestCase):
                                     }
                                 })
 
-
-
     def test_to_throw_type_error_when_str_ispassed_as_id(self):
         order_id = "/d"
         api_url = self.url + order_id
@@ -85,7 +83,6 @@ class EndpointTest(unittest.TestCase):
                                 content_type="application/json", follow_redirects=True)
         self.assertRaises(TypeError, response)
 
-    
     """This test functions checks whether the updated order was successful"""
     def test_to_update_status(self):
         
